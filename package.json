@@ -1,0 +1,32 @@
+{
+  "name": "executing-js-code",
+  "version": "1.0.0",
+  "description": "how js engine runs js code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "scope",
+    "function",
+    "expresion",
+    "function",
+    "declaration",
+    "dynamic",
+    "global",
+    "variables",
+    "undefined",
+    "undeclared",
+    "lexical",
+    "scope",
+    "hoisting",
+    "closure",
+    "object",
+    "prototype",
+    "__proto__",
+    "new",
+    "keyword"
+  ],
+  "author": "camilo colorado (camiloHimura)",
+  "license": "ISC"
+}
