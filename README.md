@@ -23,3 +23,15 @@ The code id going to be read (compiled) and at the end of it all the declaration
 
 [Explanation Code](/stepOne/savingDeclarations.js)
 
+### 1.2: Execution context
+Right after the compilation finish, this step stars, To sum up, at the end of this process all the executable code will have executed.
+Note: There is a really important concept here call "Hoisting", which in many blogs, pages and tutorials has this definition:
+
+"Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope" [w3schools](https://www.w3schools.com/js/js_hoisting.asp)
+
+it is inaccurate because js engine NOT MOVE OUR CODE, check the next link to see a deep explanation
+
+[Explanation Code](/stepOne/executionContext.js)
+
+
+
