@@ -7,3 +7,19 @@ This is an overview of how the js code is read, interpreted and run in js engine
 
 ## Step 1: Global Scope, global memory and call Stack
 
+The first step we make sure is clear is how the js code is compiled(readed, parsed, etc) and executed.
+As soon as our code is been read tree important actors appears:
+
+* [Global Scope](https://www.w3schools.com/js/js_scope.asp)
+* [Global Memory](https://www.w3schools.com/js/js_scope.asp)
+* [Call Stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
+
+(there is other as importand as the previous ones, We are going to talk about it later, though)
+
+yes, you have read rightly js code is compiled before executing, it is not compiled as the compiled in the way of java does, but at least read the code to be sure there are no problems and extract really important information. aren't you sure, are you? run this [Example](/stepOne/syntaxError.js).
+
+### 1.1: Compaling code
+The code id going to be read (compiled) and at the end of it all the declaration will have been saved on the Global Memory
+
+[Explanation Code](/stepOne/savingDeclarations.js)
+
