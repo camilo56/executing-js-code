@@ -1,37 +1,37 @@
 /**
-    When a JS code is run the global context is pushed to the call Stack.
+When a JS code is run the global context is pushed to the call Stack.
 
-    Staff look like:
-    ---------------------------- ---------------------------- ---------------------------- 
-    |       Call Stack         | |       Global Scope       | |       Global Memory      |
-    |                          | |                          | |                          |
-    |                          | |                          | | name: undefined          |
-    |                          | |                          | | otherName: "Camilo"      |
-    |                          | |                          | | sayHello: (F)            |
-    |                          | |                          | | lastName: "Colorado"     |
-    |                          | |                          | | otherLastName: undefined |
-    |                          | |                          | | hello: undefined         |
-    | ________________________ | |                          | | helloTwo: undefined      |
-    |          global()        | |                          | |                          |
-    ---------------------------- ---------------------------- ----------------------------
+Staff look like:
+---------------------------- ---------------------------- ---------------------------- 
+|       Call Stack         | |       Global Scope       | |       Global Memory      |
+|                          | |                          | |                          |
+|                          | |                          | | name: undefined          |
+|                          | |                          | | otherName: "Camilo"      |
+|                          | |                          | | sayHello: (F)            |
+|                          | |                          | | lastName: "Colorado"     |
+|                          | |                          | | otherLastName: undefined |
+|                          | |                          | | hello: undefined         |
+| ________________________ | |                          | | helloTwo: undefined      |
+|          global()        | |                          | |                          |
+---------------------------- ---------------------------- ----------------------------
 
-    At this point, the "Global memory" has saved all the information related to variable declaration, at any moment
-    the code was "moved to the top" only saved in the "Global memory" thus in this step the JS engine know the value of each
-    of them and can use it to run the code.
+At this point, the "Global memory" has saved all the information related to variable declaration, at any moment
+the code was "moved to the top" only saved in the "Global memory" thus in this step the JS engine know the value of each
+of them and can use it to run the code.
 */
 
-    var name;
-    var otherName = "Camilo";
+var name;
+var otherName = "Camilo";
 
-    console.log(lastName);
+console.log(lastName);
 
-    function sayHello(name){ return `Hi ${name}` };
+function sayHello(name){ return `Hi ${name}` };
 
-    var lastName = "Colorado";
-    otherLastName;
+var lastName = "Colorado";
+otherLastName;
 
-    var hello = sayHello(otherName);
-    var helloTwo = sayHello(otherName);
+var hello = sayHello(otherName);
+var helloTwo = sayHello(otherName);
 
 /*
     Execution context only focus on the executable code, which is the code that has parenthesis, such as console.log() or sayHello(), 
@@ -83,7 +83,7 @@
         different, thanks to it the staff looks like:
 
         Note- Js engine creates a new "sayHello" scope, it does not get back to the previous one even if the function invocation is the same.
-
+        
         ---------------------------- ------------------------------------------------ ---------------------------- 
         |       Call Stack         | |       Global Scope                           | |       Global Memory      |
         |                          | |                                              | |                          |

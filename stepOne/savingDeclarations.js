@@ -1,5 +1,5 @@
 /**
- this symbol (F) means that it's pointing out to a function code, "points out" not executed 
+ this symbol (F) means that it's pointing out to a function's definition, "points out" not executed 
 
  As I mentioned before When a JS code is run there is this 3 importantan things working togather
 

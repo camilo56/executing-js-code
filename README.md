@@ -5,6 +5,9 @@ This is an overview of how the js code is read, interpreted and run in js engine
 "A wrong prosses which takes you to the right answer is not a right answer".
 
 
+know the Js foundation helps you to write clean and accurate code furthermore makes more easy the debugging process and catch bugs
+
+
 ## Step 1: Global Scope, global memory and call Stack
 
 The first step we make sure is clear is how the js code is compiled(readed, parsed, etc) and executed.
@@ -29,9 +32,17 @@ Note: There is a really important concept here call "Hoisting", which in many bl
 
 "Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope" [w3schools](https://www.w3schools.com/js/js_hoisting.asp)
 
-it is inaccurate because js engine NOT MOVE OUR CODE, check the next link to see a deep explanation
+it is inaccurate because js engine NOT MOVE OUR CODE, check the next link to see a deep explanation:
 
-[Explanation Code](/stepOne/executionContext.js)
+* [General explanation code](/stepOne/executionContext.js)
 
+### Other helpful examples:
+
+#### Functions expresions and Function declarations;
+
+Js has a different ways of declaring functions, these are the most common. They name and behavior is not very well know, though
+
+* [Function Declaration](/stepOne/functionDeclaration.js)
+* [Function Expresion](/stepOne/functionExpresion.js)
 
 
