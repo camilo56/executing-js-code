@@ -9,7 +9,6 @@
     |                          | |                          | | otherName: "Camilo"      |
     |                          | |                          | | sayHello: (F)            |
     |                          | |                          | | lastName: "Colorado"     |
-    |                          | |                          | | otherLastName: undefined |
     |                          | |                          | | hello: undefined         |
     | ________________________ | |                          | | helloTwo: undefined      |
     |          global()        | |                          | |                          |
@@ -17,28 +16,27 @@
 
     At this point, the "Global memory" has saved all the information related to variable declaration, at any moment
     the code was "moved to the top" only saved in the "Global memory" thus in this step the JS engine know the value of each
-    of them and can use it to run the code.
+    of the variables and function declarations and can use them to run the code.
 */
 
-    var name;
-    var otherName = "Camilo";
+var name;
+var otherName = "Camilo";
 
-    console.log(lastName);
+console.log(lastName);
 
-    function sayHello(name){ return `Hi ${name}` };
+function sayHello(name){ return `Hi ${name}` };
 
-    var lastName = "Colorado";
-    otherLastName;
+var lastName = "Colorado";
 
-    var hello = sayHello(otherName);
-    var helloTwo = sayHello(otherName);
+var hello = sayHello(otherName);
+var helloTwo = sayHello(otherName);
 
 /*
     Execution context only focus on the executable code, which is the code that has parenthesis, such as console.log() or sayHello(), 
     this is stepwise:
     
     1- Run this code */console.log(lastName);/*, the outcome is printed in the console (browser or terminal in case of "node") with the value "Colorado",
-        because despite the "lastName" allocation with regard to console.log execution the value "Colorado" had saved in "Global Memory" by
+        because despite the "lastName" allocation with regard to console.log execution, the value "Colorado" had saved in "Global Memory" by
         the compilation context, that is the place where the JS engine will look for variable's values.
     
     2- */var hello = sayHello(otherName);/* is run, stepwise:
@@ -55,8 +53,7 @@
         |                          | |    -----------------  -------------------    | | otherName: "Camilo"      |
         |                          | |    |  Local Scope  |  |   Local Memory  |    | | sayHello: (F)            |
         |                          | |    |               |  | name: "colorado"|    | | lastName: "Colorado"     |
-        |                          | |    |               |  |                 |    | | otherLastName: undefined |
-        |                          | |    |               |  |                 |    | | hello: "Hi colorado"     |
+        |                          | |    |               |  |                 |    | | hello: "Hi Colorado"     |
         |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: undefined      |
         | ________________________ | |    -----------------  -------------------    | |                          |
         |          global()        | |    return "Hi Colorado"                      | |                          |
@@ -72,7 +69,6 @@
         |                          | |                                              | | otherName: "Camilo"      |
         |                          | |                                              | | sayHello: (F)            |
         |                          | |                                              | | lastName: "Colorado"     |
-        |                          | |                                              | | otherLastName: undefined |
         |                          | |                                              | | hello: "Hi Colorado"     |
         |                          | |                                              | | helloTwo: undefined      |
         | ________________________ | |                                              | |                          |
@@ -91,9 +87,8 @@
         |                          | |    -----------------  -------------------    | | otherName: "Camilo"      |
         |                          | |    |  Local Scope  |  |   Local Memory  |    | | sayHello: (F)            |
         |                          | |    |               |  | name: "Camilo"|      | | lastName: "Colorado"     |
-        |                          | |    |               |  |                 |    | | otherLastName: undefined |
-        |                          | |    |               |  |                 |    | | hello: "Hi colorado"     |
-        |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: "Camilo"       |
+        |                          | |    |               |  |                 |    | | hello: "Hi Colorado"     |
+        |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: "Hi Colorado"  |
         | ________________________ | |    -----------------  -------------------    | |                          |
         |          global()        | |    return "Hi Camilo"                        | |                          |
         ---------------------------- ------------------------------------------------ ----------------------------

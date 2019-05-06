@@ -5,7 +5,7 @@ This is an overview of how the js code is read, interpreted and run in js engine
 "A wrong prosses which takes you to the right answer is not a right answer".
 
 
-know the Js foundation helps you to write clean and accurate code furthermore makes more easy the debugging process and catch bugs
+know the Js foundation helps you to write clean and accurate code furthermore makes easier the debugging process and catch bugs
 
 
 ## Step 1: Global Scope, global memory and call Stack
@@ -17,12 +17,12 @@ As soon as our code is been read tree important actors appears:
 * [Global Memory](https://www.w3schools.com/js/js_scope.asp)
 * [Call Stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack)
 
-(there is other as importand as the previous ones, We are going to talk about it later, though)
+(there are others as important as the previous ones, We are going to talk about it later, though)
 
 yes, you have read rightly js code is compiled before executing, it is not compiled as the compiled in the way of java does, but at least read the code to be sure there are no problems and extract really important information. aren't you sure, are you? run this [Example](/stepOne/syntaxError.js).
 
 ### 1.1: Compaling code
-The code id going to be read (compiled) and at the end of it all the declaration will have been saved on the Global Memory
+The code is going to be read (compiled) and at the end of it all the declaration will have been saved on the Global Memory
 
 [Explanation Code](/stepOne/savingDeclarations.js)
 
@@ -38,7 +38,7 @@ it is inaccurate because js engine NOT MOVE OUR CODE, check the next link to see
 
 ### Other helpful examples:
 
-#### Functions expresions and Function declarations;
+#### Functions expresions and Function declarations
 
 Js has a different ways of declaring functions, these are the most common. They name and behavior is not very well know, though
 

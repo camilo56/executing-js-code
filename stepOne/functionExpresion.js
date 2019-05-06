@@ -39,6 +39,8 @@
     Even when */ var sayHello = function sayHello(name){ return `Hi ${name}`};/* looks like has saved the function definition at the compilation time, it did not,
     only the "Function Definion" does, after that compilation the value saved in "sayHello" is "undefined".
 
+    ---Hypothetical situation
+
     With that in mind makes sense The error where trigger, because the primitive "undefined" could not be called as a function, therefore, the execution is stopped,
     if we would have run */var sayHello = function sayHello(name){ return `Hi ${name}`}/* 
     before */console.log("Before", sayHello("Camilo"));/*
