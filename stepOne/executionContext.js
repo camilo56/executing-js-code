@@ -1,5 +1,5 @@
 /**
-    When a JS code is run the global context is pushed to the call Stack.
+    When a JS code is running the global context is pushed to the call Stack.
 
     Staff look like:
     ---------------------------- ---------------------------- ---------------------------- 
@@ -37,7 +37,7 @@ var helloTwo = sayHello(otherName);
     
     1- Run this code */console.log(lastName);/*, the outcome is printed in the console (browser or terminal in case of "node") with the value "Colorado",
         because despite the "lastName" allocation with regard to console.log execution, the value "Colorado" had saved in "Global Memory" by
-        the compilation context, that is the place where the JS engine will look for variable's values.
+        the compilation process, that is the place where the JS engine will look for variable's values.
     
     2- */var hello = sayHello(otherName);/* is run, stepwise:
         2.1- The new context is pushed to the call Stack
@@ -52,11 +52,11 @@ var helloTwo = sayHello(otherName);
         |                          | |    sayHello                                  | | name: undefined          |
         |                          | |    -----------------  -------------------    | | otherName: "Camilo"      |
         |                          | |    |  Local Scope  |  |   Local Memory  |    | | sayHello: (F)            |
-        |                          | |    |               |  | name: "colorado"|    | | lastName: "Colorado"     |
-        |                          | |    |               |  |                 |    | | hello: "Hi Colorado"     |
+        |                          | |    |               |  | name: "Camilo"  |    | | lastName: "Colorado"     |
+        |                          | |    |               |  |                 |    | | hello: "Hi Camilo"       |
         |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: undefined      |
         | ________________________ | |    -----------------  -------------------    | |                          |
-        |          global()        | |    return "Hi Colorado"                      | |                          |
+        |          global()        | |    return "Hi Camilo"                        | |                          |
         ---------------------------- ------------------------------------------------ ----------------------------
         
         2.4: when */var hello = sayHello(otherName)/* ends up, its scope is removed from the parent (Global Scope in this case) and 
@@ -69,7 +69,7 @@ var helloTwo = sayHello(otherName);
         |                          | |                                              | | otherName: "Camilo"      |
         |                          | |                                              | | sayHello: (F)            |
         |                          | |                                              | | lastName: "Colorado"     |
-        |                          | |                                              | | hello: "Hi Colorado"     |
+        |                          | |                                              | | hello: "Hi Camilo"       |
         |                          | |                                              | | helloTwo: undefined      |
         | ________________________ | |                                              | |                          |
         |          global()        | |                                              | |                          |
@@ -86,9 +86,9 @@ var helloTwo = sayHello(otherName);
         |                          | |    sayHello                                  | | name: undefined          |
         |                          | |    -----------------  -------------------    | | otherName: "Camilo"      |
         |                          | |    |  Local Scope  |  |   Local Memory  |    | | sayHello: (F)            |
-        |                          | |    |               |  | name: "Camilo"|      | | lastName: "Colorado"     |
-        |                          | |    |               |  |                 |    | | hello: "Hi Colorado"     |
-        |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: "Hi Colorado"  |
+        |                          | |    |               |  | name: "Camilo"  |    | | lastName: "Colorado"     |
+        |                          | |    |               |  |                 |    | | hello: "Hi Camilo"       |
+        |    sayHello(otherName)   | |    |               |  |                 |    | | helloTwo: "Hi Camilo"    |
         | ________________________ | |    -----------------  -------------------    | |                          |
         |          global()        | |    return "Hi Camilo"                        | |                          |
         ---------------------------- ------------------------------------------------ ----------------------------
