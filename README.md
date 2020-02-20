@@ -22,13 +22,13 @@ As soon as our code is been read tree important actors appears:
 yes, you have read rightly js code is compiled before executing, it is not compiled as the compiled in the way of java does, but at least read the code to be sure there are no problems and extract really important information. aren't you sure, are you? run this [Example](/stepOne/syntaxError.js).
 
 ### 1.1: Compaling code
-The code is going to be read (compiled) and at the end of it all the declaration will have been saved on the Global Memory
+The code is going to be read (compiled) and at the end of it all the declarations will have been saved on the Global Memory
 
 [Explanation Code](/stepOne/savingDeclarations.js)
 
 ### 1.2: Execution context
 Right after the compilation finish, this step stars, To sum up, at the end of this process all the executable code will have executed.
-Note: There is a really important concept here call "Hoisting", which in many blogs, pages and tutorials has this definition:
+Note: There is a really important concept here call "Hoisting", which in many blogs, pages and tutorials have this definition:
 
 "Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope" [w3schools](https://www.w3schools.com/js/js_hoisting.asp)
 
